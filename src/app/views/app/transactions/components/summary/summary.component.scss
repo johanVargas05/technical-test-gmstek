@@ -1,0 +1,49 @@
+.content {
+  background-color: #031097;
+  display: flex;
+  padding: 25px 30px;
+  border-radius: 10px;
+  .card-summary {
+    &:first-child {
+      background-color: #e6e6e6;
+      box-shadow: none;
+    }
+    background-color: #fff;
+    -webkit-box-shadow: 1px 18px 14px -9px rgba(0,0,0,0.92);
+    box-shadow: 1px 18px 14px -9px rgba(0,0,0,0.92);
+    margin-right: 25px;
+    padding: 20px 30px;
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+    & .summary-title {
+      margin-right: 20px;
+      & h3 {
+        font-weight: 600;
+        text-align: center;
+        font-size: 1.8em;
+      }
+
+      & h2 {
+        font-weight: bold;
+        text-align: center;
+        font-size: 2.5em;
+      }
+    }
+
+    & .summary-info {
+      margin-left: 20px;
+      width: 200px;
+      & p {
+        font-weight: bold;
+        color: #242aa0;
+        font-size: 1.3em;
+        span {
+          float: right;
+        }
+      }
+
+    }
+
+  }
+}

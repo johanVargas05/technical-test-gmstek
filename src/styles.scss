@@ -2,3 +2,18 @@
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; background-color: #f7f7f7; }
+
+.mat-tab-group>.mat-tab-header .mat-tab-labels {
+  .mat-tab-label {
+    opacity:1;
+    &.mat-focus-indicator.mat-tab-label-active {
+      & .mat-tab-label-content {
+        & .title-tabs {
+          opacity:1;
+          color:#031097 !important;
+        }
+      }
+    }
+
+  }
+ }

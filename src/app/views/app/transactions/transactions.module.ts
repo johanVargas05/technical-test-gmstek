@@ -1,23 +1,31 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
+import { MatCheckboxModule } from '@angular/material/checkbox';
+import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatTabsModule } from '@angular/material/tabs';
-
-import { TransactionsComponent } from './transactions.component';
+import { MatTableModule } from '@angular/material/table';
+import { DataTableComponent } from './components/data-table/data-table.component';
 import { SummaryComponent } from './components/summary/summary.component';
+import { TabsComponent } from './components/tabs/tabs.component';
+import { TransactionsComponent } from './transactions.component';
+
 import { TransactionsRoutingModule } from './transactions-routing.module';
 import { SharedModule } from '@shared/shared.module';
-import { TabsComponent } from './components/tabs/tabs.component';
+import { FiltersComponent } from './components/filters/filters.component';
 
 
 
 @NgModule({
-  declarations: [TransactionsComponent, SummaryComponent, TabsComponent],
+  declarations: [TransactionsComponent, SummaryComponent, TabsComponent, DataTableComponent, FiltersComponent],
   imports: [
     CommonModule,
     TransactionsRoutingModule,
     SharedModule,
-    MatTabsModule
+    MatPaginatorModule,
+    MatTabsModule,
+    MatTableModule,
+    MatCheckboxModule
   ]
 })
 export class TransactionsModule { }

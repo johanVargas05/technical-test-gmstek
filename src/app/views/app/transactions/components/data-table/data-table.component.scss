@@ -1,0 +1,32 @@
+
+table {
+  width: 100%;
+  margin-top: 30px;
+}
+
+tr.detail-row {
+  height: 0;
+}
+
+th {
+  font-weight: bold;
+  color: #000;
+}
+
+tr.element-row:not(.expanded-row):hover {
+  background: whitesmoke;
+}
+
+tr.element-row:not(.expanded-row):active {
+  background: #efefef;
+}
+
+.element-row td {
+  border-bottom-width: 0;
+}
+
+.element-detail {
+  overflow: hidden;
+  display: flex;
+}
+

@@ -24,6 +24,7 @@
     ],
     "paths": {
       "@layout/*":["src/app/layout/*"],
+      "@constant/*":["src/app/constant/*"],
       "@environment": ["src/environments/environment.ts"],
       "@shared/*": ["src/app/shared/*"],
       "@views/*": ["src/app/views/*"]

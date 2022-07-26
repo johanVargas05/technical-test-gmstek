@@ -1,0 +1,39 @@
+
+.content {
+  display: flex;
+  .filters {
+    display: flex;
+    .card {
+      background-color: #fff;
+      padding: 5px 20px;
+      border-radius: 10px;
+      margin-right: 20px;
+    }
+  }
+  .actions {
+    button {
+      margin: 0px 10px;
+    }
+    mat-icon {
+      color: #707070;
+    }
+  }
+}
+.spacer {
+  flex: 1 1 auto;
+}
+
+.content-search {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  & input{
+    border: none;
+    height: 100%;
+    width: 520px;
+    &:focus-visible {
+      border: none;
+      outline:none !important;
+    }
+  }
+}

@@ -1,0 +1,93 @@
+<div class="content">
+  <section class="col">
+    <div class="preview">
+      <p class="title">POS receipt: AB45678</p>
+      <mat-icon class="back" *ngIf="pagePreview==2" (click)="pagePreview=1">arrow_back_ios</mat-icon>
+      <mat-icon class="next" *ngIf="pagePreview==1" (click)="pagePreview=2">arrow_forward_ios</mat-icon>
+      <div class="bottom-action">
+        <button mat-mini-fab>
+          <mat-icon>info</mat-icon>
+        </button>
+
+        <span>{{pagePreview}} of 2</span>
+
+        <button mat-mini-fab>
+          <mat-icon>zoom_in</mat-icon>
+        </button>
+      </div>
+    </div>
+  </section>
+  <section class="col">
+    <table mat-table [dataSource]="transactions">
+      <ng-container matColumnDef="merchant">
+        <th mat-header-cell *matHeaderCellDef> Merchant Description </th>
+        <td mat-cell *matCellDef="let transaction"> {{transaction.merchant}} </td>
+        <td mat-footer-cell *matFooterCellDef> Total </td>
+      </ng-container>
+
+      <ng-container matColumnDef="code">
+        <th mat-header-cell *matHeaderCellDef> Product Code </th>
+        <td mat-cell *matCellDef="let transaction"> {{transaction.code}} </td>
+        <td mat-footer-cell *matFooterCellDef></td>
+      </ng-container>
+
+      <ng-container matColumnDef="quantity">
+        <th mat-header-cell *matHeaderCellDef> Quantity </th>
+        <td mat-cell *matCellDef="let transaction"> {{transaction.quantity}} </td>
+        <td mat-footer-cell *matFooterCellDef></td>
+      </ng-container>
+
+      <ng-container matColumnDef="retail">
+        <th mat-header-cell *matHeaderCellDef> Retail Price </th>
+        <td mat-cell *matCellDef="let transaction"> {{transaction.retail | currency}} </td>
+        <td mat-footer-cell *matFooterCellDef></td>
+      </ng-container>
+
+      <ng-container matColumnDef="gov-price">
+        <th mat-header-cell *matHeaderCellDef> Gov Price </th>
+        <td mat-cell *matCellDef="let transaction"> {{transaction.govPrice | currency}} </td>
+        <td mat-footer-cell *matFooterCellDef></td>
+      </ng-container>
+
+      <ng-container matColumnDef="amount">
+        <th mat-header-cell *matHeaderCellDef> Amount </th>
+        <td mat-cell *matCellDef="let transaction"> {{transaction.amount | currency}} </td>
+        <td mat-footer-cell *matFooterCellDef> {{TotalCost | currency}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="actions">
+        <th mat-header-cell *matHeaderCellDef> &nbsp; </th>
+        <td mat-cell *matCellDef="let transaction">
+          <button mat-raised-button class="btn-dispute">Accent</button>
+          <button mat-raised-button color="primary">Primary</button>
+        </td>
+        <td mat-footer-cell *matFooterCellDef></td>
+      </ng-container>
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+     <tfoot>
+      <tr mat-footer-row *matFooterRowDef="displayedColumns"></tr>
+     </tfoot>
+    </table>
+
+    <article class="history-section">
+      <h4 class="card-number">Card Number AIR Card *********123</h4>
+      <div class="history">
+        <h3>History <span>Date and Time</span></h3>
+        <hr>
+        <p>transaction Created <span>09/25/21 08:15</span></p>
+        <p>transaction Delayed <span>09/30/21 08:15</span></p>
+        <div class="comments">
+          <mat-label>Comments</mat-label>
+          <mat-form-field appearance="outline">
+            <textarea matInput ></textarea>
+          </mat-form-field>
+          <mat-icon class="send-comment">send</mat-icon>
+        </div>
+      </div>
+    </article>
+
+  </section>
+
+</div>

@@ -20,6 +20,13 @@ tr.element-row:not(.expanded-row):hover {
 tr.element-row:not(.expanded-row):active {
   background: #efefef;
 }
+tr.element-row.expanded-row {
+  background:#f2f9ff;
+  .status-text {
+    background-color: #fff;
+    color:#d34435;
+  }
+}
 
 .element-row td {
   border-bottom-width: 0;
@@ -30,3 +37,11 @@ tr.element-row:not(.expanded-row):active {
   display: flex;
 }
 
+.status-text {
+  padding: 10px 20px;
+  color: #171f9e;
+  font-weight: bold;
+}
+app-detail-transaction {
+  width: 100%;
+}

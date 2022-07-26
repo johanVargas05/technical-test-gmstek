@@ -1,0 +1,130 @@
+.content {
+  display: flex;
+  padding: 20px;
+  .col {
+    padding: 15px;
+    width: 65%;
+    position: relative;
+    &:first-child {
+      width: 35%;
+    }
+
+  }
+ }
+
+ .preview {
+   height:60vh;
+   width: 25vw;
+   background-color:#e6e6e6;
+   border: 5px solid #7e7eaf;
+   border-radius: 10px;
+   padding: 15px;
+   position: relative;
+   .title {
+    font-weight: bold;
+    color: #7b7b7b;
+   }
+   .next {
+    position: absolute;
+    right: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #707070;
+    cursor: pointer;
+   }
+   .back {
+    cursor: pointer;
+    position: absolute;
+    left: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #707070;
+   }
+   .bottom-action {
+    margin: 0px -15px;
+    position: absolute;
+    bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    button {
+      background-color: #fff;
+      color: #707070;
+    }
+    span {
+      font-weight: bold;
+      color: #808080;
+    }
+   }
+ }
+
+ table  {
+  width: 100%;
+  th {
+    font-weight: bold;
+    font-size: 1.2em;
+    color: #000;
+    text-align: center;
+  }
+  td {
+    color: #4f4f4f;
+  }
+ .mat-footer-cell{
+        color: #000;
+        font-weight: bold;
+      }
+  .btn-dispute{
+    background-color: #424242;
+    color: #fff;
+    margin-right: 10px;
+    }
+ }
+
+.history-section {
+  position: absolute;
+  width: 100%;
+  bottom: 10px;
+  display: flex;
+  align-items: flex-end;
+  .card-number {
+    font-weight: bold;
+    color: #000;
+    font-size: 1.2em;
+    width: 450px;
+  }
+  .history {
+    width: 100%;
+    color: #9b9b9b;
+    h3 {
+      font-weight: bold;
+      span {
+        float: right;
+      }
+    }
+    p {
+      span {
+        float: right;
+      }
+    }
+    .comments {
+      margin-top: 20px;
+      position: relative;
+      mat-label {
+        font-weight: bold;
+      }
+      mat-form-field {
+        width: 100%;
+        textarea {
+          resize: none;
+        }
+      }
+      .send-comment {
+        color: #000;
+        position: absolute;
+        bottom: 30px;
+        right: 10px;
+        cursor: pointer;
+      }
+    }
+  }
+}

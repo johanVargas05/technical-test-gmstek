@@ -10,4 +10,5 @@ export interface ITransaction {
   total : string;
   card: string;
   status: string;
+  add: boolean;
 }

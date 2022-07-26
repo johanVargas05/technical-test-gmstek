@@ -13,11 +13,12 @@ import { TransactionsComponent } from './transactions.component';
 import { TransactionsRoutingModule } from './transactions-routing.module';
 import { SharedModule } from '@shared/shared.module';
 import { FiltersComponent } from './components/filters/filters.component';
+import { DetailTransactionComponent } from './components/detail-transaction/detail-transaction.component';
 
 
 
 @NgModule({
-  declarations: [TransactionsComponent, SummaryComponent, TabsComponent, DataTableComponent, FiltersComponent],
+  declarations: [TransactionsComponent, SummaryComponent, TabsComponent, DataTableComponent, FiltersComponent, DetailTransactionComponent],
   imports: [
     CommonModule,
     TransactionsRoutingModule,
